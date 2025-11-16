@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>About - Guntown Vape</title>
+
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    background:#0d0d0d;
+    color:white;
+    font-family:Arial, sans-serif;
+    overflow:auto;
+    padding-bottom:80px;
+  }
+
+  /* Header */
+  .header{
+    width:100%;
+    background:#cfcfcf;
+    color:#1a1a1a;
+    padding:22px 16px;
+    text-align:center;
+    font-family:'Georgia',serif;
+    font-weight:900;
+    font-size:36px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.35);
+    position:sticky;
+    top:0;
+    z-index:10;
+  }
+
+  /* Layout */
+  .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:60px 80px;
+    gap:50px;
+  }
+
+  /* About text */
+  .about-text{
+    width:50%;
+    font-size:20px;
+    line-height:1.6;
+  }
+
+  /* Right-side image */
+  .about-image{
+    width:450px;            /* Increased size */
+    max-width:100%;
+    border-radius:12px;
+    box-shadow:0 12px 40px rgba(0,0,0,0.6);
+  }
+
+  /* Center Section */
+  .center-section{
+    text-align:center;
+    margin-top:80px;
+  }
+
+  .call-today{
+    font-size:24px;
+    font-weight:900;
+    margin-bottom:10px;
+  }
+
+  .special-orders{
+    font-size:14px;
+    font-weight:bold;
+    max-width:600px;
+    margin:0 auto;
+    line-height:1.4;
+    margin-bottom:25px;
+  }
+
+  /* Peach Label */
+  .call-label{
+    background:#ffb28b;  /* peach */
+    color:#ffffff;
+    font-weight:900;
+    padding:12px 20px;
+    border-radius:8px;
+    display:inline-block;
+    margin-bottom:35px;
+    font-size:18px;
+  }
+
+  /* Follow Us */
+  .follow-title{
+    font-size:20px;
+    margin-bottom:10px;
+    font-weight:900;
+  }
+
+  /* Instagram button */
+  .insta-btn{
+    background:#d62976;
+    padding:12px 22px;
+    border-radius:30px;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:40px;
+    font-size:16px;
+  }
+  .insta-btn img{
+    width:20px;
+    height:20px;
+  }
+
+  /* Location */
+  .location-title{
+    font-size:20px;
+    font-weight:900;
+    margin-bottom:8px;
+  }
+  .address{
+    font-size:16px;
+    margin-bottom:30px;
+  }
+
+  /* Bottom categories */
+  .categories{
+    font-size:16px;
+    opacity:0.9;
+    font-weight:bold;
+  }
+
+  /* Responsive */
+  @media(max-width:900px){
+    .container{
+      flex-direction:column;
+      text-align:center;
+      padding:40px 20px;
+    }
+    .about-text{width:100%}
+    .about-image{width:100%; max-width:420px;}
+  }
+</style>
+</head>
+
+<body>
+
+  <div class="header">About</div>
+
+  <div class="container">
+    <div class="about-text">
+      <p>
+        Welcome to MGS Convenience Vape — your trusted destination for premium gummies, chocolates,
+        vape disposables, cartridges, and more.
+      </p>
+      <br>
+      <p>
+        We provide only top-quality products sourced from trusted brands and curated for the best
+        experience. We focus on customer satisfaction, variety, and innovation.
+      </p>
+    </div>
+
+    <!-- Image on RIGHT side -->
+    <img src="about.jpg" class="about-image" alt="About Image">
+  </div>
+
+  <!-- CENTER SECTION -->
+  <div class="center-section">
+    <div class="call-today">CALL US TODAY</div>
+
+    <div class="special-orders">
+      Don't see a particular brand or device you are looking for?  
+      Call us today to inquire about Special Orders.
+    </div>
+
+    <div class="call-label">
+      Call Us Now — +1 (646) 438-9468
+    </div>
+
+    <div class="follow-title">FOLLOW US</div>
+
+    <a href="https://www.instagram.com/mgs_canna/?igsh=MW83MGd0d3JsdGo0eQ%3D%3D" class="insta-btn" target="_blank">
+      <img src="ins.jpg" alt="Instagram Icon">
+      Instagram
+    </a>
+    
+    <div class="location-title">Location</div>
+    <div class="address">303 W 30th St, New York, NY 10001</div>
+    
+    <div class="categories">
+      Gummies | Chocolate | Pre Roll Packs | Disposables | Cartridges
+    </div>
+  </div>
+
+</body>
+</html>

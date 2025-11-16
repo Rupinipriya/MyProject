@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guntown Vape</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{height:100%;overflow:hidden;font-family:Arial,sans-serif;background:#0d0d0d;}
+
+  /* TOP SCROLLER */
+  .top-scroller{
+    position:relative;
+    z-index:5;
+    width:100%;
+    background:black;
+    color:white;
+    font-size:12px;
+    font-weight:bold;
+    height:36px;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+  }
+  .top-scroller span{
+    display:inline-block;
+    padding-left:100%;
+    animation:scrollText 30s linear infinite; /* slower */
+    white-space: nowrap; /* keeps text in single line */
+}
+    @keyframes scrollText{
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+  /* HEADER */
+  .header{
+    position:relative;
+    z-index:5;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:3cm;
+    padding:0 3cm;
+    background:rgba(255,255,255,0.85);
+  }
+  .shop-name{
+    font-size:28px;
+    font-weight:900;
+    font-family:'Georgia',serif;
+    background:linear-gradient(to right, black, red);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    text-shadow:2px 2px 4px rgba(0,0,0,0.6),0 0 6px rgba(255,0,0,0.5);
+  }
+  .nav-links a{
+    text-decoration:none;
+    font-weight:bold;
+    font-size:16px;
+    color:black;
+    margin-left:2rem;
+    cursor:pointer;
+  }
+  .nav-links a:active{color:blue;}
+
+  /* CENTER LOGO */
+  main{
+    position:relative;
+    z-index:5;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:calc(100% - 3.36cm); /* header + scroller */
+  }
+  .hero-title{
+    font-family:'Georgia',serif; /* Western/cowboy font vibe */
+    font-size:140px; /* large letters */
+    font-weight:900; /* thick letters */
+    color:black; /* main body color */
+    text-shadow:
+        3px 3px 0 red,      /* red outline */
+        6px 6px 0 black,    /* deeper shadow for 3D depth */
+        0 0 5px white,      /* subtle highlight */
+        0 0 10px rgba(255,255,255,0.7); /* glow effect */
+    -webkit-text-stroke:4px red; /* red outline stroke */
+    letter-spacing:-3px;
+  }
+  /* INFO SECTION BELOW LOGO */
+.info-section{
+    text-align:center;
+    margin-top:50px; /* space below logo */
+    z-index:5;
+    position:relative;
+    color:white; /* default text color */
+    font-family:Arial, sans-serif;
+}
+
+.location-title{
+    font-size:24px;
+    font-weight:bold;
+    margin-bottom:5px;
+}
+
+.address{
+    font-size:20px;
+    margin-bottom:10px;
+}
+
+.products{
+    font-size:18px;
+    margin-bottom:20px;
+}
+
+.call-label{
+    display:inline-block;
+    background:white;
+    color:red;
+    font-weight:bold;
+    padding:15px 25px;
+    border-radius:5px;
+    font-size:16px;
+}
+/* MAIN CENTER CONTAINER */
+main{
+    position:relative;
+    z-index:5;
+    height:100%; /* full screen height */
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.center-container{
+    text-align:center;
+}
+
+</style>
+</head>
+<body>
+
+<!-- 1. Smoke Video Background -->
+<video autoplay muted loop id="smokeVideo" style="
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  z-index:0;
+  pointer-events:none;">
+  <source src="smoke.mp4" type="video/mp4">
+</video>
+
+<!-- 2. Optional Dark Overlay -->
+<div style="
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.5);
+  z-index:1;
+  pointer-events:none;">
+</div>
+
+<!-- 3. Top Scrolling Text -->
+<div class="top-scroller">
+  <span>Follow us on Instagram and leave a Google review - get 5% off on purchase</span>
+</div>
+
+<!-- 4. Header -->
+<!-- 4. Header -->
+<div class="header">
+  <div class="shop-name">MGS Convenience</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a> <!-- Link back to homepage -->
+    <a href="products.html">Products</a> <!-- Link to products page -->
+    <a href="about.html">About</a> <!-- Optional About page -->
+  </div>
+</div>
+
+<!-- 5. Center Logo -->
+<main>
+    <div class="center-container">
+      <!-- Center 3D Logo -->
+      <div class="hero-title">MGS Convenience</div>
+  
+      <!-- Info Section Below Logo -->
+      <div class="info-section">
+        <p class="location-title">Location</p>
+        <p class="address">303 W 30th St, New York, NY 10001</p>
+        <p class="products">Gummies | Chocolate | Pre Roll Packs | Disposables | Cartridges</p>
+        <div class="call-label">
+          Call us today to hear about our sales, deals on our top products, and our awesome rewards program
+        </div>
+      </div>
+    </div>
+  </main>
+
+<!-- 6. Nav Button Script -->
+<script>
+document.querySelectorAll('.nav-links a').forEach(a=>{
+  a.addEventListener('click',()=>{ 
+    document.querySelectorAll('.nav-links a').forEach(el=>el.style.color='black');
+    a.style.color='blue';
+  });
+});
+</script>
+
+</body>
+</html>
